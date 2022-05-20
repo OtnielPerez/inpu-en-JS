@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+    <!--Crea una funcion que solicite un input de dos cantidades y realice la suma de estas -->
+    <script>
+        function sumar(valor){
+            valor = parseInt(valor);
+
+            total = document.getElementById('spTotal').innerHTML;
+
+            total = (total == null || total == undefined||total == "" ) ? 0 : total;
+
+            total = (parseInt(total) + parseInt(valor));
+
+            document.getElementById('spTotal').innerHTML = total;
+        }
+        
+    </script>
+</head>
+<body> 
+    <span>Valor 1</span>
+    <input type="text" onchange="sumar(this.value);"/>
+    <br>
+    <span>Valor 2</span>
+    <input type="text" onchange="sumar(this.value);"/>
+    <br>
+    <span>El resultado es: </span> <span id="spTotal"></span>
+</body>
+</html>
